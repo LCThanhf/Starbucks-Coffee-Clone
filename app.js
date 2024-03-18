@@ -112,10 +112,8 @@ cross.addEventListener('click', function() {
 });
 
 window.addEventListener('resize', function() {
-    // Hide the menu bar and show the cross when the window width is less than 768px
-    if (window.innerWidth < 768) {
-        nav.style.left = '100%';
-        cross.style.display = 'none';
-        bar.style.display = 'block';
+    // Enable scrolling when the window width is greater than 768px
+    if (window.innerWidth > 768) {
+        document.body.style.overflow = 'auto';
     }
 });
